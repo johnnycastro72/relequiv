@@ -1,0 +1,898 @@
+/* formulario preguntare-v */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Arial';
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: antiquewhite;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    background: antiquewhite;
+    color: black;
+    position: absolute;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+.td1 {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 1%;
+}
+
+.td2 {
+    width: 50%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 1%;
+}
+
+.td3 {
+    width: 33%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 1%;
+}
+
+tr {
+    height: 50%;
+}
+
+.imgdic {
+    width: 75%;
+    padding: 0%;
+    margin-left: 12%;
+}
+
+.imagen {
+    width: 75%;
+    border-radius: 2em;
+    padding: 3%;
+}
+
+.imagen2 {
+    width: 50%;
+    border-radius: 2em;
+    padding: 3%;
+}
+
+.kanji {
+    width: 75%;
+    border-radius: 2em;
+    padding: 3%;
+}
+
+.kanji2 {
+    width: 25%;
+    border-radius: 2em;
+    padding: 3%;
+}
+
+.palabra {
+	background: #ff851b;
+	color: black;
+	border-radius: 0.5em;
+    border: 3px solid #70452e;
+	padding: 3%;
+	font-weight: 400;
+	font-family: Arial;
+	letter-spacing: 1px;
+	font-size: 5em;
+}
+
+.palabra2 {
+	background: #ff851b;
+	color: black;
+	border-radius: 0.5em;
+    border: 3px solid #70452e;
+	padding: 3%;
+	font-weight: 400;
+	font-family: Arial;
+	letter-spacing: 1px;
+	font-size: 5em;
+    width: 75%;
+    margin-left: 12%;
+}
+
+p.Acierto {
+	background: #ff851b;
+	color: black;
+	border-radius: 0.5em;
+    border: 3px solid #70452e;
+	padding: 3%;
+	font-weight: 400;
+	font-family: Arial;
+	letter-spacing: 1px;
+	font-size: 5em;
+}
+
+p.Falla1 {
+	background: #ff851b;
+	color: black;
+	border-radius: 0.5em;
+    border: 3px solid #70452e;
+	padding: 3%;
+	font-weight: 400;
+	font-family: Arial;
+	letter-spacing: 1px;
+	font-size: 5em;
+}
+
+p.Falla2 {
+	background: #ff851b;
+	color: black;
+	border-radius: 0.5em;
+    border: 3px solid #70452e;
+	padding: 3%;
+	font-weight: 400;
+	font-family: Arial;
+	letter-spacing: 1px;
+	font-size: 5em;
+}
+
+p.Falla3 {
+	background: #ff851b;
+	color: black;
+	border-radius: 0.5em;
+    border: 3px solid #70452e;
+	padding: 3%;
+	font-weight: 400;
+	font-family: Arial;
+	letter-spacing: 1px;
+	font-size: 5em;
+}
+
+img.Acierto {
+    cursor: pointer;
+    width: 75%;
+    border-radius: 3em;
+    padding: 3%;
+}
+
+img.Falla1 {
+    cursor: pointer;
+    width: 75%;
+    border-radius: 3em;
+    padding: 3%;
+}
+
+img.Falla2 {
+    cursor: pointer;
+    width: 75%;
+    border-radius: 3em;
+    padding: 3%;
+}
+
+img.Falla3 {
+    cursor: pointer;
+    width: 75%;
+    border-radius: 3em;
+    padding: 3%;
+}
+
+.alertContainer{
+    width: 24%;
+    border: 10px;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    position: absolute;
+    top: 8%;
+    left: 38%;
+    padding: 3%;
+    z-index: 10000;
+    border-radius: 3px;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all ease .3s;
+}
+.alertContainer.error{
+    background: #e0e0e0;
+}
+.alertContainer.warning{
+    background: #FB9E57;
+}
+.alertContainer.info{
+    background: #847DA2;
+}
+.alertContainer .cerrarAlert{
+    position: absolute;
+    width:20px;
+    height:20px;
+    border-radius:100px;
+    background:#e0e0e0;
+    color: red;
+    border:2px solid #fff;
+    text-align: center;
+    line-height: 14px;
+    top:-10px;
+    right:-10px;
+    box-shadow: 0px 0px 10px -2px #333;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+.alertContainer.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.alertContainer .mensajeAlert{
+    font-size:22px;
+    vertical-align: middle;
+    display: inline-block;
+    font-family: sans-serif;
+}
+
+.form{
+    width: 100%;
+    top: 75%;
+}
+
+.form button{
+	background: #ff851b;
+	color: black;
+	border-radius: 0.5em;
+	width: 20%;
+	padding: 0.4em 0px;
+	font-weight: 400;
+	font-family: Arial;
+	letter-spacing: 1px;
+    margin-left: 0%;
+    margin-bottom: 3%;
+	font-size: 3.5em;
+	cursor: pointer;
+	transition: all 0.5s ease;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -25%);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.form button:hover{
+	background: #ff851f;
+    border: 3px solid #70452e;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.form button label{
+    position: relative;
+    left: 5%;
+    font-size: 0.6em;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1500px) {
+   /* Styles for macbook pro 13*/
+
+    .imgdic {
+        margin-top: 4%;
+    }
+
+    .form button{
+        font-size: 3em;
+    }
+
+    .form button label{
+        font-size: 0.5em;
+    }
+
+    .imagen {
+        border-radius: 2.5em;
+    }
+
+    .imagen2 {
+        border-radius: 2.5em;
+    }
+
+    .kanji {
+        border-radius: 2.5em;
+    }
+
+    .kanji2 {
+        border-radius: 2.5em;
+    }
+
+    .palabra {
+        font-size: 4.2em;
+    }
+
+    .palabra2 {
+        font-size: 4.2em;
+    }
+
+    p.Acierto {
+        font-size: 4.2em;
+    }
+
+    p.Falla1 {
+        font-size: 4.2em;
+    }
+
+    p.Falla2 {
+        font-size: 4.2em;
+    }
+
+    p.Falla3 {
+        font-size: 4.2em;
+    }
+
+    img.Acierto {
+        border-radius: 2.5em;
+        padding: 3%;
+    }
+
+    img.Falla1 {
+        border-radius: 2.5em;
+        padding: 3%;
+    }
+
+    img.Falla2 {
+        border-radius: 2.5em;
+        padding: 3%;
+    }
+
+    img.Falla3 {
+        border-radius: 2.5em;
+        padding: 3%;
+    }
+
+    .form button{
+        border-radius: 0.5em;
+        width: 25%;
+        padding: 0.5em 0px;
+        font-size: 4em;
+        top: 85%;
+    }
+
+    .form button label{
+        left: 5%;
+        font-size: 0.6em;
+    }
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+   /* Styles for macbook pro 13*/
+
+    .imgdic {
+        margin-top: 4%;
+        width: 71%;
+        margin-left: 14%;
+    }
+
+    .form button{
+        font-size: 2.5em;
+    }
+
+    .form button label{
+        font-size: 0.4em;
+    }
+
+    .imagen {
+        border-radius: 2em;
+    }
+
+    .imagen2 {
+        border-radius: 2em;
+    }
+
+    .kanji {
+        border-radius: 2em;
+    }
+
+    .kanji2 {
+        border-radius: 2em;
+    }
+
+    .palabra {
+        font-size: 3.3em;
+    }
+
+    .palabra2 {
+        font-size: 3.3em;
+    }
+
+    p.Acierto {
+        font-size: 3.3em;
+    }
+
+    p.Falla1 {
+        font-size: 3.3em;
+    }
+
+    p.Falla2 {
+        font-size: 3.3em;
+    }
+
+    p.Falla3 {
+        font-size: 3.3em;
+    }
+
+    img.Acierto {
+        border-radius: 2em;
+        padding: 3%;
+    }
+
+    img.Falla1 {
+        border-radius: 2em;
+        padding: 3%;
+    }
+
+    img.Falla2 {
+        border-radius: 2em;
+        padding: 3%;
+    }
+
+    img.Falla3 {
+        border-radius: 2em;
+        padding: 3%;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+   /* Styles for tablets */
+
+    .imgdic {
+        margin-top: 4%;
+        width: 74%;
+        margin-left: 13%;
+    }
+
+    .form button{
+        font-size: 1.8em;
+    }
+
+    .form button label{
+        font-size: 0.3em;
+    }
+
+    .imagen {
+        border-radius: 1.5em;
+    }
+
+    .imagen2 {
+        border-radius: 1.5em;
+    }
+
+    .kanji {
+        border-radius: 1.5em;
+    }
+
+    .kanji2 {
+        border-radius: 1.5em;
+    }
+
+    .palabra {
+        font-size: 2.4em;
+    }
+
+    .palabra2 {
+        font-size: 2.4em;
+    }
+
+    p.Acierto {
+        font-size: 2.4em;
+    }
+
+    p.Falla1 {
+        font-size: 2.4em;
+    }
+
+    p.Falla2 {
+        font-size: 2.4em;
+    }
+
+    p.Falla3 {
+        font-size: 2.4em;
+    }
+
+    img.Acierto {
+        border-radius: 1.5em;
+        padding: 3%;
+    }
+
+    img.Falla1 {
+        border-radius: 1.5em;
+        padding: 3%;
+    }
+
+    img.Falla2 {
+        border-radius: 1.5em;
+        padding: 3%;
+    }
+
+    img.Falla3 {
+        border-radius: 1.5em;
+        padding: 3%;
+    }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+   /* Styles for iphone 6 */
+
+    .imgdic {
+        margin-top: 4%;
+    }
+
+    .form button{
+        font-size: 1.5em;
+    }
+
+    .form button label{
+        font-size: 0.2em;
+    }
+
+    .imagen {
+        border-radius: 1em;
+    }
+
+    .imagen2 {
+        border-radius: 1em;
+    }
+
+    .kanji {
+        border-radius: 1em;
+    }
+
+    .kanji2 {
+        border-radius: 1em;
+    }
+
+    .palabra {
+        font-size: 1.8em;
+    }
+
+    .palabra2 {
+        font-size: 1.8em;
+    }
+
+    p.Acierto {
+        font-size: 1.8em;
+    }
+
+    p.Falla1 {
+        font-size: 1.8em;
+    }
+
+    p.Falla2 {
+        font-size: 1.8em;
+    }
+
+    p.Falla3 {
+        font-size: 1.8em;
+    }
+
+    img.Acierto {
+        border-radius: 1em;
+        padding: 3%;
+    }
+
+    img.Falla1 {
+        border-radius: 1em;
+        padding: 3%;
+    }
+
+    img.Falla2 {
+        border-radius: 1em;
+        padding: 3%;
+    }
+
+    img.Falla3 {
+        border-radius: 1em;
+        padding: 3%;
+    }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 599px) {
+   /* Styles for iphone 5 */
+
+    .imgdic {
+        margin-top: 4%;
+    }
+
+    .form button{
+        font-size: 1.2em;
+    }
+
+    .form button label{
+        font-size: 0.15em;
+    }
+
+    .imagen {
+        border-radius: 1em;
+    }
+
+    .imagen2 {
+        border-radius: 1em;
+    }
+
+    .kanji {
+        border-radius: 1em;
+    }
+
+    .kanji2 {
+        border-radius: 1em;
+    }
+
+    .palabra {
+        font-size: 1.5em;
+    }
+
+    .palabra2 {
+        font-size: 1.5em;
+    }
+
+    p.Acierto {
+        font-size: 1.5em;
+    }
+
+    p.Falla1 {
+        font-size: 1.5em;
+    }
+
+    p.Falla2 {
+        font-size: 1.5em;
+    }
+
+    p.Falla3 {
+        font-size: 1.5em;
+    }
+
+    img.Acierto {
+        border-radius: 1em;
+    }
+
+    img.Falla1 {
+        border-radius: 1em;
+    }
+
+    img.Falla2 {
+        border-radius: 1em;
+    }
+
+    img.Falla3 {
+        border-radius: 1em;
+    }
+
+}
+
+@media screen and (min-width: 460px) and (max-width: 499px) {
+   /* Styles for iphone 4 */
+
+    .imgdic {
+        margin-top: 4%;
+    }
+
+    .form button{
+        font-size: 1em;
+    }
+
+    .form button label{
+        font-size: 0.1em;
+    }
+
+    .imagen {
+        border-radius: 0.8em;
+    }
+
+    .imagen2 {
+        border-radius: 0.8em;
+    }
+
+    .kanji {
+        border-radius: 0.8em;
+    }
+
+    .kanji2 {
+        border-radius: 0.8em;
+    }
+
+    .palabra {
+        font-size: 1.3em;
+    }
+
+    .palabra2 {
+        font-size: 1.3em;
+    }
+
+    p.Acierto {
+        font-size: 1.3em;
+    }
+
+    p.Falla1 {
+        font-size: 1.3em;
+    }
+
+    p.Falla2 {
+        font-size: 1.3em;
+    }
+
+    p.Falla3 {
+        font-size: 1.3em;
+    }
+
+    img.Acierto {
+        border-radius: 0.8em;
+    }
+
+    img.Falla1 {
+        border-radius: 0.8em;
+    }
+
+    img.Falla2 {
+        border-radius: 0.8em;
+    }
+
+    img.Falla3 {
+        border-radius: 0.8em;
+    }
+
+}
+
+@media screen and (min-width: 400px) and (max-width: 459px) {
+   /* Styles for smartphones */
+
+    .imgdic {
+        margin-top: 4%;
+    }
+
+    .form button{
+        font-size: 0.9em;
+    }
+
+    .form button label{
+        font-size: 0.1em;
+    }
+
+    .imagen {
+        border-radius: 0.6em;
+    }
+
+    .imagen2 {
+        border-radius: 0.6em;
+    }
+
+    .kanji {
+        border-radius: 0.6em;
+    }
+
+    .kanji2 {
+        border-radius: 0.6em;
+    }
+
+    .palabra {
+        font-size: 1.2em;
+    }
+
+    .palabra2 {
+        font-size: 1.2em;
+    }
+
+    p.Acierto {
+        font-size: 1.2em;
+    }
+
+    p.Falla1 {
+        font-size: 1.2em;
+    }
+
+    p.Falla2 {
+        font-size: 1.2em;
+    }
+
+    p.Falla3 {
+        font-size: 1.2em;
+    }
+
+    img.Acierto {
+        border-radius: 0.6em;
+    }
+
+    img.Falla1 {
+        border-radius: 0.6em;
+    }
+
+    img.Falla2 {
+        border-radius: 0.6em;
+    }
+
+    img.Falla3 {
+        border-radius: 0.6em;
+    }
+
+}
+
+@media screen and (max-width: 399px) {
+   /* Styles for smartphones */
+
+    .imgdic {
+        margin-top: 4%;
+    }
+
+    .form button{
+        font-size: 0.5em;
+    }
+
+    .form button label{
+        font-size: 0.1em;
+    }
+
+    .imagen {
+        border-radius: 0.4em;
+    }
+
+    .imagen2 {
+        border-radius: 0.4em;
+    }
+
+    .kanji {
+        border-radius: 0.4em;
+    }
+
+    .kanji2 {
+        border-radius: 0.4em;
+    }
+
+    .palabra {
+        font-size: 0.6em;
+    }
+
+    .palabra2 {
+        font-size: 0.6em;
+    }
+
+    p.Acierto {
+        font-size: 0.6em;
+    }
+
+    p.Falla1 {
+        font-size: 0.6em;
+    }
+
+    p.Falla2 {
+        font-size: 0.6em;
+    }
+
+    p.Falla3 {
+        font-size: 0.6em;
+    }
+
+    img.Acierto {
+        border-radius: 0.4em;
+    }
+
+    img.Falla1 {
+        border-radius: 0.4em;
+    }
+
+    img.Falla2 {
+        border-radius: 0.4em;
+    }
+
+    img.Falla3 {
+        border-radius: 0.4em;
+    }
+
+}

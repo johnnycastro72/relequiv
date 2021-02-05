@@ -1,0 +1,229 @@
+/* formulario preguntarfm-v, preguntarfe-v, preguntarff-v */
+
+/* screen width: 1600 */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Arial';
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: antiquewhite;
+}
+
+section {
+    background: antiquewhite;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 120px;
+    color: black;
+    width: 100%;
+    text-shadow: 1px 1px 1px gray;
+    text-align: center;
+}
+
+.form{
+    width: 100%;
+    top: 75%;
+}
+
+.form button{
+	background: #ff851b;
+	color: black;
+	border-radius: 0.5em;
+	width: 25%;
+	padding: 0.4em 0px;
+	font-weight: 400;
+	font-family: Arial;
+	letter-spacing: 1px;
+    margin-left: 0%;
+    margin-bottom: 3%;
+	font-size: 44px;
+	cursor: pointer;
+	transition: all 0.5s ease;
+    position: absolute;
+    top: 88%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -25%);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.form button:hover{
+	background: #ff851f;
+    border: 3px solid #70452e;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.form button label{
+    position: relative;
+    left: 5%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1500px) {
+   /* Styles for macbook pro 13*/
+
+    h4 {
+        font-weight: 400;
+        font-size: 95px;
+    }
+
+    .form button{
+        font-weight: 300;
+        font-size: 36px;
+    }
+
+    .form button label{
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+   /* Styles for macbook pro 13*/
+
+    h4 {
+        font-weight: 400;
+        font-size: 90px;
+    }
+
+    .form button{
+        font-weight: 300;
+        font-size: 38px;
+    }
+
+    .form button label{
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+   /* Styles for tablets */
+
+    h4 {
+        font-weight: 300;
+        font-size: 75px;
+    }
+
+    .form button{
+        font-weight: 200;
+        font-size: 28px;
+    }
+
+    .form button label{
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+   /* Styles for iphone 6 */
+
+    h4 {
+        font-weight: 250;
+        font-size: 60px;
+    }
+
+    .form button{
+        font-weight: 200;
+        font-size: 22px;
+    }
+
+    .form button label{
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 599px) {
+   /* Styles for iphone 5 */
+
+    h4 {
+        font-weight: 250;
+        font-size: 50px;
+    }
+
+    .form button{
+        font-weight: 200;
+        font-size: 18px;
+    }
+
+    .form button label{
+        font-size: 9px;
+    }
+
+}
+
+@media screen and (min-width: 460px) and (max-width: 499px) {
+   /* Styles for iphone 4 */
+
+    h4 {
+        font-weight: 250;
+        font-size: 45px;
+    }
+
+    .form button{
+        font-weight: 200;
+        font-size: 15px;
+    }
+
+    .form button label{
+        font-size: 8px;
+    }
+
+}
+
+@media screen and (min-width: 400px) and (max-width: 459px) {
+   /* Styles for smartphones */
+
+    h4 {
+        font-weight: 250;
+        font-size: 40px;
+    }
+
+    .form button{
+        font-weight: 200;
+        font-size: 13px;
+    }
+
+    .form button label{
+        font-size: 7px;
+    }
+
+}
+
+@media screen and (max-width: 399px) {
+   /* Styles for smartphones */
+
+    h4 {
+        font-weight: 250;
+        font-size: 30px;
+    }
+
+    .form button{
+        font-weight: 200;
+        font-size: 10px;
+    }
+
+    .form button label{
+        font-size: 4px;
+    }
+
+}

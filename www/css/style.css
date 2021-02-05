@@ -1,0 +1,188 @@
+*{
+    margin: 0px;
+    padding: 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    text-decoration: none;
+}
+
+body{
+    background-color: antiquewhite;
+    background-position: center;
+    background-attachment: fixed;
+	-webkit-background-size: cover;
+    background-size: cover;
+    background-blend-mode: screen;
+	font-family: Roboto;
+}
+
+.container-form{
+	position: relative;
+	background: rgba(0,0,0,.7);
+	width: 100%;
+	max-width: 500px;
+	margin: 48px auto;
+	color: #fff;
+	border-radius: 5px;
+}
+
+.header{
+    width: 100%;
+    height: 80px;
+    padding: 12px;
+    background: #282638;
+    display: flex;
+    position: relative;
+}
+
+.form{
+    width: 100%;
+}
+
+.form .welcome-form{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.form .welcome-form h1{
+    font-weight: 300;
+    font-size: 30px;
+    color: #898989;
+}
+
+.line-input{
+    max-width: 75%;
+    display: flex;
+    border-bottom: 0px solid #efefef;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 6px;
+    position: relative;
+}
+
+.border-input{
+    border-bottom: 0px solid #5584ff;
+}
+
+.line-input input{
+	outline: none;
+	background: rgba(0,0,0,.5);
+	display: block;
+	width: 100%;
+	padding: 10px 15px;
+	color: #fff;
+	border: none;
+	border-radius: 2px 0px 2px 2px;
+	border-bottom: 4px solid #ff851b;
+	font-family: Roboto;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 5px 0px 5px 0px;
+	transition: all .5s ease;
+}
+
+.line-input input:hover{
+	border-bottom: 4px solid #0075d9;
+}
+
+.line-input label{
+    font-size: 23px;
+    position: relative;
+    top: 10px;
+    color: #0076ff;
+    height: 34.5px;
+	border-bottom: 4px solid #ff851b;
+}
+
+.line-input label:hover{
+	border-bottom: 4px solid #0075d9;
+}
+
+.form button{
+	background: #ff851b;
+	color: #fff;
+	border: none;
+	width: 60%;
+	padding: 10px 0px;
+	font-weight: normal;
+	font-family: Roboto;
+	letter-spacing: 1px;
+    margin-left: 20%;
+    margin-bottom: 10px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.form button:hover{
+	background: #0075d9;
+}
+
+.form button label{
+    position: relative;
+    left: 5%;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.mensaje{
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 6px;
+    color: red;
+}
+
+footer{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+footer h2{
+    color: orange;
+    font-size: 34px;
+    text-shadow: 3px 3px 2px rgba(0,117,217,0.7);
+}
+
+
+@media screen and (max-width: 500px){
+    .container-form{
+    	width: 95%;
+    }
+    
+    footer h2{
+        font-size: 27px;
+    }
+
+}
+
+@media screen and (max-width: 320px){
+    .form .welcome-form{
+        display: block;
+        text-align: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .form .welcome-form h1{
+        font-size: 28px;
+    }
+
+    .container-form{
+    	width: 95%;
+    }
+    
+    footer h2{
+        font-size: 20px;
+    }
+
+}
+

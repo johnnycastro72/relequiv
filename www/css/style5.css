@@ -1,0 +1,216 @@
+/* formulario preguntam-v */
+
+/* screen width: 1600 */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Arial';
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: antiquewhite;
+}
+
+section {
+    background: antiquewhite;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.Img {
+    border-radius: 2em;
+    display: block;
+    width: 150%;
+}
+
+h2 {
+	background: #ff851b;
+	color: black;
+	font-weight: 400;
+	font-family: Arial;
+	font-size: 120px;
+	border-radius: 0.5em;
+    border: 3px solid #70452e;
+	padding: 30px;
+	letter-spacing: 1px;
+    margin-left: 0%;
+    margin-bottom: 3%;
+	cursor: pointer;
+	transition: all 0.5s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1500px) {
+   /* Styles for macbook pro 13*/
+
+    section {
+        left: 50%;
+    }
+
+    .Img {
+        border-radius: 1.8em;
+        width: 150%;
+    }
+    
+    h2 {
+        font-weight: 300;
+        font-size: 100px;
+        padding: 25px;
+    }
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+   /* Styles for macbook pro 13*/
+
+    section {
+        left: 50%;
+    }
+
+    .Img {
+        border-radius: 1.8em;
+        width: 130%;
+    }
+    
+    h2 {
+        font-weight: 300;
+        font-size: 100px;
+        padding: 25px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+   /* Styles for tablets */
+
+    section {
+        left: 50%;
+    }
+
+    .Img {
+        border-radius: 1.8em;
+        width: 120%;
+    }
+    
+    h2 {
+        font-weight: 300;
+        font-size: 100px;
+        padding: 25px;
+    }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+   /* Styles for iphone 6 */
+
+    section {
+        left: 50%;
+    }
+
+    .Img {
+        border-radius: 1.6em;
+        width: 100%;
+    }
+    
+    h2 {
+        font-weight: 300;
+        font-size: 90px;
+        padding: 20px;
+    }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 599px) {
+   /* Styles for iphone 5 */
+
+    section {
+        left: 55%;
+    }
+
+    .Img {
+        border-radius: 1.4em;
+        width: 90%;
+    }
+    
+    h2 {
+        font-weight: 300;
+        font-size: 85px;
+        padding: 18px;
+    }
+
+}
+
+@media screen and (min-width: 460px) and (max-width: 499px) {
+   /* Styles for iphone 4 */
+
+    section {
+        left: 58%;
+    }
+
+    .Img {
+        border-radius: 1.2em;
+        width: 80%;
+    }
+    
+    h2 {
+        font-weight: 300;
+        font-size: 80px;
+        padding: 15px;
+    }
+
+}
+
+@media screen and (min-width: 400px) and (max-width: 459px) {
+   /* Styles for smartphones */
+
+    section {
+        left: 60%;
+    }
+
+    .Img {
+        border-radius: 1em;
+        width: 70%;
+    }
+    
+    h2 {
+        font-weight: 300;
+        font-size: 70px;
+        padding: 13px;
+    }
+
+}
+
+@media screen and (max-width: 399px) {
+   /* Styles for smartphones */
+
+    section {
+        left: 65%;
+    }
+
+    .Img {
+        border-radius: 0.8em;
+        width: 60%;
+    }
+    
+    h2 {
+        font-weight: 300;
+        font-size: 50px;
+        padding: 10px;
+    }
+
+}
